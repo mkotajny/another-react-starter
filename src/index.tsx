@@ -2,9 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const someVariable: string = 'ssdds';
+import reportWebVitals from './reportWebVitals.js';
 
 ReactDOM.render(
 	<React.StrictMode>
