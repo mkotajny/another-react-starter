@@ -6,6 +6,7 @@
 <br/><br/><br/>
 
 # About the project
+
 **_"Another React Starter"_** is my own set of extra-configuration and extra-libraries, which boosts start of **React** projects. So the main goal for this project - is an **initial-config time saver**
 (for me or anybody who is interested in using this boilerplate).
 
@@ -20,13 +21,13 @@ To start the development, run:
 
 ```
 //create a folder for a new project
-mkdir new-project 
+mkdir new-project
 
 //enter into the folder
-cd new-project 
+cd new-project
 
 // clone another-react-starter repo
-git clone https://github.com/mkotajny/another-react-starter.git  
+git clone https://github.com/mkotajny/another-react-starter.git
 
 // remove .git folder from the cloned repo
 sudo rm -r .git
