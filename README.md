@@ -49,7 +49,7 @@ yarn install
 // run the boilerplate
 yarn start
 
-// replace the content of README.md with the content dedicated for your project
+// feel free to (partially or fully) replace the content of README.md with the content dedicated for your project
 ```
 
 <br/><br/>
@@ -64,12 +64,13 @@ The starter contains many parts. Some of them are components, some of them are l
 			<th style="border: 1px solid">Category</th>
 			<th style="border: 1px solid">Module</th>
 			<th style="border: 1px solid">Description</th>
+			<th style="border: 1px solid">Module Doc</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td style="border: 1px solid">-</td>
-			<td style="border: 1px solid">
+			<td style="border: 1px solid; text-align: center">
 				<img src="https://user-images.githubusercontent.com/33925073/144419384-1deb6fde-61f3-48e3-9e5f-d57ac4530028.png" />
 				<br/>
 				<a href="https://reactjs.org" target="_blank"><b>React</b></a>
@@ -77,10 +78,11 @@ The starter contains many parts. Some of them are components, some of them are l
 			<td style="border: 1px solid">
 				Core of the starter - a JavaScript library for building user interfaces
 			</td>
+			<td style="border: 1px solid">-</td>
 		</tr>
 		<tr>
 			<td style="border: 1px solid">Code Quality</td>
-			<td style="border: 1px solid">
+			<td style="border: 1px solid; text-align: center">
 				<img src="https://user-images.githubusercontent.com/33925073/144420826-006d41f8-72f0-4280-bcd4-56735c04c705.png" />
 				<br/>
 				<a href="https://www.typescriptlang.org" target="_blank"><b>Typescript</b></a>
@@ -88,10 +90,11 @@ The starter contains many parts. Some of them are components, some of them are l
 			<td style="border: 1px solid">
 				Strongly typed programming language that builds on JavaScript
 			</td>
+			<td style="border: 1px solid"><a href="#typescript">redirect</a></td>
 		</tr>
 		<tr>
 			<td style="border: 1px solid">Code Quality</td>
-			<td style="border: 1px solid">
+			<td style="border: 1px solid; text-align: center">
 				<img src="https://user-images.githubusercontent.com/33925073/144421230-cd9bc574-0005-4a4e-94fa-0fa23ae8f271.png" />
 				<br/>
 				<a href="https://prettier.io" target="_blank"><b>Prettier</b></a>
@@ -99,10 +102,11 @@ The starter contains many parts. Some of them are components, some of them are l
 			<td style="border: 1px solid">
 				An opinionated code formatter with support for JS, JSX, Typescript and many other languages
 			</td>
+			<td style="border: 1px solid"><a href="#prettier">redirect</a></td>
 		</tr>
 		<tr>
 			<td style="border: 1px solid">Code Quality</td>
-			<td style="border: 1px solid">
+			<td style="border: 1px solid; text-align: center">
 				<img src="https://user-images.githubusercontent.com/33925073/144421573-68893864-75c0-4c94-9251-70f7647ae62c.png" />
 				<br/>
 				<a href="https://eslint.org" target="_blank"><b>ESLint</b></a>
@@ -110,20 +114,122 @@ The starter contains many parts. Some of them are components, some of them are l
 			<td style="border: 1px solid">
 				A code analysis tool for "linting" - identifying errors or problematic patterns in your  JavaScript code
 			</td>
+			<td style="border: 1px solid"><a href="#eslint">redirect</a></td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid">-</td>
+			<td style="border: 1px solid; text-align: center">
+				<img src="https://user-images.githubusercontent.com/33925073/145224397-411537f8-c539-4d21-8444-a632c679ca1a.png" />
+				<br/>
+				<a href="https://react.i18next.com/" target="_blank"><b>I18next</b></a>
+			</td>
+			<td style="border: 1px solid">
+				An Internationalization framework for React / React Native which is based on i18next.
+			</td>
+			<td style="border: 1px solid"><a href="#i18n">redirect</a></td>
 		</tr>
 	</tbody>
 </table>
+
+<br/><br/><a id="typescript" ></a>
+
+# Typescript
+
+## Rules customization
+
+The easiest way of customization of Typescript/Prettier/ESLint rules is to edit <b>tsconfig.json</b> file (located in the root folder of the project).
+
+<br/><br/><a id="prettier" ></a>
+
+# Prettier
+
+## Rules customization
+
+The easiest way of customization of Typescript/Prettier/ESLint rules is to edit <b>.prettierc</b> file (located in the root folder of the project).
+
 <br/>
 
-# Customization of code-quality rules
+## Using of Prettier in the project
 
-The easiest way of customization of Typescript/Prettier/ESLint rules is to edit config files (located in the root folder of the project):
+<br/>
 
-<ul>
-  <li>For <b>Typescript</b> - edit rules in <b>tsconfig.json</b> file</li>
-  <li>For <b>Prettier</b> - edit rules in <b>.prettierc</b> file</li>
-  <li>For <b>ESLint</b> - edit rules in <b>.eslintrc.js</b> file (in the "rules" node)</li>
-</ul>
+### Manually
+
+via terminal run command, which should fix or prettier issues in the project files.:
+
+```
+yarn format:fix
+```
+
+... the "format:fix" script is defined in the "package.json" file.
+
+Recommendation: install also **"Prettier" plugin** in your IDE (e.g. "VS code"), where you may configure the plugin for run prettier on every save of changes on any project file. For the "VS code" - the configuration (for the mentioned plugin) is already added into ".csCode" folder in the project, but to use this config - you must install the Prettier plugin.
+
+<br/>
+
+## Automatic run with the pre-commit hook
+
+Prettier automatically runs (fixes prettier issues in the project files) on every commit to the git repository.
+
+<br/><br/><a id="eslint" ></a>
+
+# ESLint
+
+## Rules customization
+
+The easiest way of customization of Typescript/Prettier/ESLint rules is to edit <b>.eslintrc.js</b> file (located in the root folder of the project).
+
+<br/>
+
+## Using of ESLint in the project
+
+<br/>
+
+### Manually
+
+via terminal run command, which should list (doesn't fix!) ESlint issues in the project files.:
+
+```
+yarn lint
+```
+
+OR run
+
+```
+yarn validate
+```
+
+... which does both (prettier and linting): fixes Prettier issues and shows or ESlint issues.
+
+<br/>
+
+## Automatic run with the pre-commit hook
+
+ESLint automatically runs on every commit-attempt to the git repository, so the hook **prevents developer from committing** changes with unresolved ESlint-issues in the code.
+
+<br/><br/><a id="i18n" ></a>
+
+# i18next
+
+## How it works
+
+The "another-react-starter" contains a single (sample) UI Text ("_Welcome to Another React Starter_" in English and Polish). These texts are located in the /src/i18n/translations folder. The translated text is invoked in the _App.tsx_ file , with _useTranslate_ hook:
+
+```
+import { useTranslation } from 'react-i18next';
+...
+const { t } = useTranslation();
+...
+<p>{t('MAIN.WELCOME')}</p>
+
+```
+
+<br/>
+
+## Check the progress state of your translations
+
+The starter contains [translation-check](https://github.com/locize/translation-check) plugin, useful mostly for catching e.g. untranslated message-keys.
+Just go to this url http://localhost:3000?showtranslations (when your app runs of course), to check the statistics of _translation-check_ plugin.
 
 <br/><br/>
 
