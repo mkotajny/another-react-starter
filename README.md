@@ -49,7 +49,7 @@ yarn install
 // run the boilerplate
 yarn start
 
-// replace the content of README.md with the content dedicated for your project
+// feel free to (partially or fully) replace the content of README.md with the content dedicated for your project
 ```
 
 <br/><br/>
@@ -169,7 +169,7 @@ Recommendation: install also **"Prettier" plugin** in your IDE (e.g. "VS code"),
 
 ## Automatic run with the pre-commit hook
 
-Prettier automatically runs (fixes prettier issues in the project files) on every attempt of sending commit to the git repository.
+Prettier automatically runs (fixes prettier issues in the project files) on every commit to the git repository.
 
 <br/><br/><a id="eslint" ></a>
 
@@ -187,28 +187,25 @@ The easiest way of customization of Typescript/Prettier/ESLint rules is to edit 
 
 ### Manually
 
-via terminal run command, which should fix or ESlint issues in the project files.:
+via terminal run command, which should list (doesn't fix!) ESlint issues in the project files.:
 
 ```
 yarn lint
 ```
 
-... which shows (doesn't fix !) ESlint issues in the code
-OR
+OR run
 
 ```
 yarn validate
 ```
 
-... which does both (prettier and linting): fixes Prettier issues and shows or ESlint issues
-
-... the "format:fix" script is defined in the "package.json" file.
+... which does both (prettier and linting): fixes Prettier issues and shows or ESlint issues.
 
 <br/>
 
 ## Automatic run with the pre-commit hook
 
-ESLint automatically runs on every attempt of sending commit to the git repository, so the hook **prevents developer from committing** changes with unresolved ESlint-issues in the code.
+ESLint automatically runs on every commit-attempt to the git repository, so the hook **prevents developer from committing** changes with unresolved ESlint-issues in the code.
 
 <br/><br/><a id="i18n" ></a>
 
@@ -216,11 +213,23 @@ ESLint automatically runs on every attempt of sending commit to the git reposito
 
 ## How it works
 
-UI Texts (in different languages) are located in the /src/i18n/translations folder. To check how the texts are invoked in the application find any component with invocation of _useTranslate_ hook, for example:
+The "another-react-starter" contains a single (sample) UI Text ("_Welcome to Another React Starter_" in English and Polish). These texts are located in the /src/i18n/translations folder. The translated text is invoked in the _App.tsx_ file , with _useTranslate_ hook:
 
 ```
-t('MAIN.WELCOME');
+import { useTranslation } from 'react-i18next';
+...
+const { t } = useTranslation();
+...
+<p>{t('MAIN.WELCOME')}</p>
+
 ```
+
+<br/>
+
+## Check the progress state of your translations
+
+The starter contains [translation-check](https://github.com/locize/translation-check) plugin, useful mostly for catching e.g. untranslated message-keys.
+Just go to this url http://localhost:3000?showtranslations (when your app runs of course), to check the statistics of _translation-check_ plugin.
 
 <br/><br/>
 
