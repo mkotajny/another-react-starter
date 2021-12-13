@@ -1,5 +1,17 @@
 {
+  "NAVIGATION": {
+    "HOME": "Home Page",
+    "OTHER_PAGE": "Other page"
+  },
   "MAIN": {
-    "WELCOME": "Welcome to Another React Starter"
+    "WELCOME": "Welcome to \"Another React Starter\"",
+    "MORE_INFO": "Get more info"
+  },
+  "OTHER_PAGE": {
+    "CONTENT": "This page is made to show react-router in action.",
+    "SWITCH_LANGUAGE": {
+      "HEADER": "Also you are able to switch app language here: ",
+      "BUTTON": "Switch language"
+    }
   }
 }

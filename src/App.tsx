@@ -1,23 +1,11 @@
-import './App.css';
-import { useTranslation } from 'react-i18next';
+import Navigation from './components/Navigation';
+import AppRoutes from './routing/AppRoutes';
+import styles from './App.module.css';
 
-const App = () => {
-  const { t } = useTranslation();
-
-  return (
-    <div className='App'>
-      <header className='App-header'>
-        <p>{t('MAIN.WELCOME')}</p>
-        <a
-          className='App-link'
-          href='https://github.com/mkotajny/another-react-starter'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Get more info
-        </a>
-      </header>
-    </div>
-  );
-};
+const App = () => (
+  <div className={styles.app}>
+    <Navigation />
+    <AppRoutes />
+  </div>
+);
 export default App;
