@@ -6,7 +6,6 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'airbnb',
     'plugin:security/recommended',
     'plugin:import/typescript',
     'prettier',
@@ -21,15 +20,16 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'security'],
   rules: {
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      { ts: 'never', tsx: 'never' },
-    ],
+    'no-console': 'error',
+    'react/jsx-props-no-spreading': 'error',
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-use-before-define': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
     'react/function-component-definition': [
       2,
       {
