@@ -1,5 +1,17 @@
 {
+  "NAVIGATION": {
+    "HOME": "Strona Główna",
+    "OTHER_PAGE": "Inna strona"
+  },
   "MAIN": {
-    "WELCOME": "Witaj w \"Kolejnym Starterze React\""
+    "WELCOME": "Witaj w \"Kolejnym Starterze React\"",
+    "MORE_INFO": "Uzyskaj więcej informacji"
+  },
+  "OTHER_PAGE": {
+    "CONTENT": "Ta strona została utworzona w celu zaprezentowania działania React-routera.",
+    "SWITCH_LANGUAGE": {
+      "HEADER": "Możesz tutaj również zmienić język aplikacji: ",
+      "BUTTON": "Przełącz język"
+    }
   }
 }

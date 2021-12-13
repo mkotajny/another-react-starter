@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/33925073/144449499-b6f4ef21-d442-4ec6-998b-47dab3665dbd.png" />
+  <img src="https://user-images.githubusercontent.com/33925073/145850054-8554dce8-11a7-444a-a923-fcb418e76dcf.jpg" />
 </p>
 <h1 align="center">Oh boy &#128580;<br/>Another React Starter ?</h1>
 <br/><br/><br/>
@@ -48,8 +48,6 @@ yarn install
 
 // run the boilerplate
 yarn start
-
-// feel free to (partially or fully) replace the content of README.md with the content dedicated for your project
 ```
 
 <br/><br/>
@@ -69,7 +67,7 @@ The starter contains many parts. Some of them are components, some of them are l
 	</thead>
 	<tbody>
 		<tr>
-			<td style="border: 1px solid">-</td>
+			<td style="border: 1px solid">UI</td>
 			<td style="border: 1px solid; text-align: center">
 				<img src="https://user-images.githubusercontent.com/33925073/144419384-1deb6fde-61f3-48e3-9e5f-d57ac4530028.png" />
 				<br/>
@@ -79,6 +77,18 @@ The starter contains many parts. Some of them are components, some of them are l
 				Core of the starter - a JavaScript library for building user interfaces
 			</td>
 			<td style="border: 1px solid">-</td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid">UI</td>
+			<td style="border: 1px solid; text-align: center">
+				<img src="https://user-images.githubusercontent.com/33925073/145827319-a9141ca2-4018-49df-9a0e-bf84f26d0e60.png" />
+				<br/>
+				<a href="https://reactjs.org" target="_blank"><b>React Router v6</b></a>
+			</td>
+			<td style="border: 1px solid">
+				Collection of React components, hooks and utilities that make it easy to build multi-page applications with React
+			</td>
+			<td style="border: 1px solid"><a href="#react-router">redirect</a></td>
 		</tr>
 		<tr>
 			<td style="border: 1px solid">Code Quality</td>
@@ -131,6 +141,15 @@ The starter contains many parts. Some of them are components, some of them are l
 	</tbody>
 </table>
 
+<br/><br/><a id="react-router" ></a>
+
+# React Router
+
+To check how React Router is implemented in the app - open (and analyze simple code) files listed below:
+
+- src/index.tsx - look for usage _BrowserRouter_ component
+- arc/App.tsx - look for _Navigation_ and _AppRoutes_ components
+
 <br/><br/><a id="typescript" ></a>
 
 # Typescript
@@ -151,8 +170,6 @@ The easiest way of customization of Typescript/Prettier/ESLint rules is to edit 
 
 ## Using of Prettier in the project
 
-<br/>
-
 ### Manually
 
 via terminal run command, which should fix or prettier issues in the project files.:
@@ -164,8 +181,6 @@ yarn format:fix
 ... the "format:fix" script is defined in the "package.json" file.
 
 Recommendation: install also **"Prettier" plugin** in your IDE (e.g. "VS code"), where you may configure the plugin for run prettier on every save of changes on any project file. For the "VS code" - the configuration (for the mentioned plugin) is already added into ".csCode" folder in the project, but to use this config - you must install the Prettier plugin.
-
-<br/>
 
 ## Automatic run with the pre-commit hook
 
@@ -183,8 +198,6 @@ The easiest way of customization of Typescript/Prettier/ESLint rules is to edit 
 
 ## Using of ESLint in the project
 
-<br/>
-
 ### Manually
 
 via terminal run command, which should list (doesn't fix!) ESlint issues in the project files.:
@@ -200,8 +213,6 @@ yarn validate
 ```
 
 ... which does both (prettier and linting): fixes Prettier issues and shows or ESlint issues.
-
-<br/>
 
 ## Automatic run with the pre-commit hook
 

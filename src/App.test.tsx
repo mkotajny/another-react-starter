@@ -1,4 +1,5 @@
-import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+import { render } from '@testing-library/react';
 import App from './App';
 
 jest.mock('react-i18next', () => ({
@@ -6,7 +7,9 @@ jest.mock('react-i18next', () => ({
 }));
 
 test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Get more info/i);
-  expect(linkElement).toBeInTheDocument();
+  render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
 });
