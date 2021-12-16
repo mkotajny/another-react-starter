@@ -1,13 +1,12 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/33925073/145850054-8554dce8-11a7-444a-a923-fcb418e76dcf.jpg" />
+  <img src="https://user-images.githubusercontent.com/33925073/146369487-1535e133-045f-4f32-ad9c-d74a952728bf.jpg" />
 </p>
 <h1 align="center">Oh boy &#128580;<br/>Another React Starter ?</h1>
 <br/><br/><br/>
 
 # About the project
 
-**_"Another React Starter"_** is my own set of extra-configuration and extra-libraries, which boosts start of **React** projects. So the main goal for this project - is an **initial-config time saver**
-(for me or anybody who is interested in using this boilerplate).
+**_"Another React Starter"_** is a set of extra-configuration and extra-libraries, which boosts start of **React** projects. So the main goal for this project - is an **initial-config time saver** .
 
 This repo is inspired by similar project named [react-starter-boilerplate](https://github.com/TheSoftwareHouse/react-starter-boilerplate) and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 <br/><br/>
@@ -127,7 +126,7 @@ The starter contains many parts. Some of them are components, some of them are l
 			<td style="border: 1px solid"><a href="#eslint">redirect</a></td>
 		</tr>
 		<tr>
-			<td style="border: 1px solid">-</td>
+			<td style="border: 1px solid">Javascript utilities</td>
 			<td style="border: 1px solid; text-align: center">
 				<img src="https://user-images.githubusercontent.com/33925073/145224397-411537f8-c539-4d21-8444-a632c679ca1a.png" />
 				<br/>
@@ -137,6 +136,18 @@ The starter contains many parts. Some of them are components, some of them are l
 				An Internationalization framework for React / React Native which is based on i18next.
 			</td>
 			<td style="border: 1px solid"><a href="#i18n">redirect</a></td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid">Javascript utilities</td>
+			<td style="border: 1px solid; text-align: center">
+				<img src="https://user-images.githubusercontent.com/33925073/146366990-77dd9f0b-b8a2-45ef-9749-bdc5d3532837.png" />
+				<br/>
+				<a href="https://lodash.com/" target="_blank"><b>Lodash</b></a>
+			</td>
+			<td style="border: 1px solid">
+				A modern JavaScript utility library delivering modularity, performance & extras.
+			</td>
+			<td style="border: 1px solid"><a href="#lodash">redirect</a></td>
 		</tr>
 	</tbody>
 </table>
@@ -224,15 +235,31 @@ ESLint automatically runs on every commit-attempt to the git repository, so the 
 
 ## How it works
 
-The "another-react-starter" contains a single (sample) UI Text ("_Welcome to Another React Starter_" in English and Polish). These texts are located in the /src/i18n/translations folder. The translated text is invoked in the _App.tsx_ file , with _useTranslate_ hook:
+The "another-react-starter" contains a sample UI Texts (like "_Welcome to Another React Starter_" in English and Polish). These texts are located in the /src/i18n/translations folder and all of them are used in the starter application - for example they are invoked in the _OtherPage/index.tsx_ file , with _useTranslate_ hook:
 
 ```
 import { useTranslation } from 'react-i18next';
 ...
 const { t } = useTranslation();
 ...
-<p>{t('MAIN.WELCOME')}</p>
+<p>{t('OTHER_PAGE.CONTENT')}</p>
+```
 
+<br/><br/><a id="lodash" ></a>
+
+# Lodash
+
+## How it works
+
+Lodash "in action" is on the same example component - _OtherPage/index.tsx_:
+
+```
+import _ from 'lodash';
+...
+const sampleArray: Array<string> = ['1stt', '2nd', '3rd'];
+...
+//"last" function of the lodash library gets last ("3rd") element of the array
+<div>{_.last(sampleArray)}</div>
 ```
 
 <br/>
@@ -244,7 +271,7 @@ Just go to this url http://localhost:3000?showtranslations (when your app runs o
 
 <br/><br/>
 
-# Available Scripts
+# Useful Scripts
 
 In the project directory, you can run:
 
@@ -270,3 +297,15 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `format:fix`
+
+Manual run of Prettier for all appropriate project files. The same Prettier also runs for every commit.
+
+### `yarn lint`
+
+Manual run of ESLint for all appropriate project files. The same ESlint also runs on every commit.
+
+### `yarn validate`
+
+Extended mode of manual run of complex code-quality check - prettier, linter, typescript types ckeck etc. Similar operation also runs on every commit.
