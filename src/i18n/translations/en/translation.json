@@ -1,4 +1,5 @@
 {
+  "README": "Consider to NOT remove sample translations below (and this comment), until you will implement any REAL feature, which uses the same flow of translations",
   "NAVIGATION": {
     "HOME": "Home Page",
     "OTHER_PAGE": "Other page"
@@ -8,10 +9,14 @@
     "MORE_INFO": "Get more info"
   },
   "OTHER_PAGE": {
-    "CONTENT": "This page is made to show react-router in action.",
+    "CONTENT": "Sample page",
     "SWITCH_LANGUAGE": {
-      "HEADER": "Also you are able to switch app language here: ",
       "BUTTON": "Switch language"
+    },
+    "LODASH_EXAMPLE": {
+      "HEADER": "Example of LODASH library usage",
+      "ARRAY": "Full array",
+      "LAST_ELEMENT": "Last element of thew array"
     }
   }
 }

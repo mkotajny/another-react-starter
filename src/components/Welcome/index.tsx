@@ -1,3 +1,10 @@
+/*
+consider to NOT remove this component (use it as an implementation-example),  until you will implement any REAL feature, which uses: 
+  - translations
+  - lodash
+  - routing
+*/
+
 import { useTranslation } from 'react-i18next';
 import styles from './welcome.module.css';
 
@@ -6,7 +13,7 @@ const Welcome = () => {
   return (
     <header className={styles.appHeader}>
       <img
-        src='https://user-images.githubusercontent.com/33925073/145850054-8554dce8-11a7-444a-a923-fcb418e76dcf.jpg'
+        src='https://user-images.githubusercontent.com/33925073/146369487-1535e133-045f-4f32-ad9c-d74a952728bf.jpg'
         className={styles.appLogo}
         alt='logo'
       />
