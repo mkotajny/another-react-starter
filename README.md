@@ -11,46 +11,6 @@
 This repo is inspired by similar project named [react-starter-boilerplate](https://github.com/TheSoftwareHouse/react-starter-boilerplate) and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 <br/><br/>
 
-# How to start
-
-Please be aware, that this project is configured for usage of [yarn](https://yarnpkg.com/) package manager (all commands listed below uses yarn not npm !)
-
-To start the development, run:
-
-```
-//create a folder for your project
-mkdir new-project
-
-//enter into the folder
-cd new-project
-
-// clone another-react-starter repo
-git clone https://github.com/mkotajny/another-react-starter.git
-
-// remove .git folder from the cloned repo
-sudo rm -r .git
-
-// initialize your git repo for your project
-git init
-
-// set remote to your github repo
-git remote add origin [url to your github repo]
-git remote -v
-
-// make a first commit to your repo
-git add .
-git commit -m 'initial commit'
-git push origin master
-
-// install the boilerplate for your new app
-yarn install
-
-// run the boilerplate
-yarn start
-```
-
-<br/><br/>
-
 # Modules in the starter
 
 The starter contains many parts. Some of them are components, some of them are libraries. I've decided to call them as "**modules**" .
@@ -151,6 +111,46 @@ The starter contains many parts. Some of them are components, some of them are l
 		</tr>
 	</tbody>
 </table>
+
+<br/><br/>
+
+# How to start
+
+Please be aware, that this project is configured for usage of [yarn](https://yarnpkg.com/) package manager (all commands listed below uses yarn not npm !)
+
+To start the development, run:
+
+```
+//create a folder for your project
+mkdir new-project
+
+//enter into the folder
+cd new-project
+
+// clone another-react-starter repo (add a dot at the end ! - to clone to the current folder)
+git clone https://github.com/mkotajny/another-react-starter.git .
+
+// remove .git folder from the cloned repo
+sudo rm -r .git
+
+// initialize your git repo for your project
+git init
+
+// set remote to your github repo
+git remote add origin [url to your github repo]
+git remote -v
+
+// make a first commit to your repo
+git add .
+git commit -m 'initial commit'
+git push origin master
+
+// install the boilerplate for your new app
+yarn install
+
+// run the boilerplate
+yarn start
+```
 
 <br/><br/><a id="react-router" ></a>
 
