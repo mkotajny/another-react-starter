@@ -13,7 +13,7 @@ This repo is inspired by similar project named [react-starter-boilerplate](https
 
 # Modules in the starter
 
-The starter contains many parts. Some of them are components, some of them are libraries. I've decided to call them as "**modules**" .
+The starter contains many parts. Some of them are components, some of them are libraries. These elements are named "**modules**" in this readme doc.
 
 <table>
 	<thead>
@@ -152,9 +152,15 @@ yarn install
 yarn start
 ```
 
-<br/><br/><a id="react-router" ></a>
+<br/><br/>
 
-# React Router
+# More info about project modules
+
+This section describes details about modules used in this project (listed in the table from previous section)
+
+<br/><a id="react-router" ></a>
+
+## React Router
 
 To check how React Router is implemented in the app - open (and analyze simple code) files listed below:
 
@@ -163,25 +169,25 @@ To check how React Router is implemented in the app - open (and analyze simple c
 
 <br/><br/><a id="typescript" ></a>
 
-# Typescript
+## Typescript
 
-## Rules customization
+### Rules customization
 
 The easiest way of customization of Typescript/Prettier/ESLint rules is to edit <b>tsconfig.json</b> file (located in the root folder of the project).
 
-<br/><br/><a id="prettier" ></a>
+<br/><a id="prettier" ></a>
 
-# Prettier
+## Prettier
 
-## Rules customization
+### Rules customization
 
 The easiest way of customization of Typescript/Prettier/ESLint rules is to edit <b>.prettierc</b> file (located in the root folder of the project).
 
 <br/>
 
-## Using of Prettier in the project
+### Using of Prettier in the project
 
-### Manually
+**Manually**
 
 via terminal run command, which should fix or prettier issues in the project files.:
 
@@ -193,23 +199,25 @@ yarn format:fix
 
 Recommendation: install also **"Prettier" plugin** in your IDE (e.g. "VS code"), where you may configure the plugin for run prettier on every save of changes on any project file. For the "VS code" - the configuration (for the mentioned plugin) is already added into ".csCode" folder in the project, but to use this config - you must install the Prettier plugin.
 
-## Automatic run with the pre-commit hook
+<br/>
+
+**Automatic run with the pre-commit hook**
 
 Prettier automatically runs (fixes prettier issues in the project files) on every commit to the git repository.
 
 <br/><br/><a id="eslint" ></a>
 
-# ESLint
+## ESLint
 
-## Rules customization
+### Rules customization
 
 The easiest way of customization of Typescript/Prettier/ESLint rules is to edit <b>.eslintrc.js</b> file (located in the root folder of the project).
 
 <br/>
 
-## Using of ESLint in the project
+### Using of ESLint in the project
 
-### Manually
+**Manually**
 
 via terminal run command, which should list (doesn't fix!) ESlint issues in the project files.:
 
@@ -225,15 +233,23 @@ yarn validate
 
 ... which does both (prettier and linting): fixes Prettier issues and shows or ESlint issues.
 
-## Automatic run with the pre-commit hook
+<br/>
+
+**Automatic run with the pre-commit hook**
 
 ESLint automatically runs on every commit-attempt to the git repository, so the hook **prevents developer from committing** changes with unresolved ESlint-issues in the code.
 
-<br/><br/><a id="i18n" ></a>
+Make sure that pre-commit hook **runs on every commit** (run of prettier+ESlint + unit tests). If not (e.g. message _"The 'pre-commit' hook was ignored because it's not set as executable"_ appears), than you have to set pre-commit file as executable. To do this, go (using the terminal) to the .husky directory and run:
 
-# i18next
+```
+chmod +x .git/hooks/pre-commit
+```
 
-## How it works
+<br/><a id="i18n" ></a>
+
+## i18next
+
+### How it works
 
 The "another-react-starter" contains a sample UI Texts (like "_Welcome to Another React Starter_" in English and Polish). These texts are located in the /src/i18n/translations folder and all of them are used in the starter application - for example they are invoked in the _OtherPage/index.tsx_ file , with _useTranslate_ hook:
 
@@ -247,9 +263,9 @@ const { t } = useTranslation();
 
 <br/><br/><a id="lodash" ></a>
 
-# Lodash
+## Lodash
 
-## How it works
+### How it works
 
 Lodash "in action" is on the same example component - _OtherPage/index.tsx_:
 
@@ -264,7 +280,7 @@ const sampleArray: Array<string> = ['1stt', '2nd', '3rd'];
 
 <br/>
 
-## Check the progress state of your translations
+### Check the progress state of your translations
 
 The starter contains [translation-check](https://github.com/locize/translation-check) plugin, useful mostly for catching e.g. untranslated message-keys.
 Just go to this url http://localhost:3000?showtranslations (when your app runs of course), to check the statistics of _translation-check_ plugin.
